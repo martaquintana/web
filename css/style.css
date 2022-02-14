@@ -56,20 +56,42 @@ table {
 
 /* Stylesheet */
 body {
-  background-color: rgba(25, 100, 100, 0.5);
+	background-color: rgba(  72, 201, 176 , 1);
+	padding: 20px;
 }
 
-h1 {
-  font-size: 40px;
-  color:white;
+div{
+	background-color:   #34495e ;
+	overflow: hidden;
 }
 
+.titulo{
+	padding: 30px;
+	margin-bottom: 20px;
+}
+.parrafo{
+	padding: 100px;
+	margin-bottom: 20px;
+}
+.col{
+	float:left;
+	width: 49%;
+	margin-right: 1%;
+	padding: 90px;
+	margin-bottom: 20px;
 
-div.container{
-  color:white;
-  font-weight: bold;
+}
+.col2{
+	float:right;
+	width: 49%;
+	margin-left: 1%;
+	padding: 90px;
+	margin-bottom: 20px;
 }
 
-.container h4 {
-  color:black;
+.parrafo2{
+	padding: 100px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+
 }
