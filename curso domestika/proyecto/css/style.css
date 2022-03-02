@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+/* anchura total = width */
+
+/*Eliminar el subrayado de enlaces*/
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+/*WEBFONTS*/
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Stylesheet */
+body{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+	font-family:'Open Sans';
+	color:#f5f0ed;
+}
+img{
+	height: 100px;
+}
+
+h1{
+	color:#f5f0ed;
+	font-size: 44px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom:40px;
+}
+
+h2{
+	font-size: 28px;
+	font-weight: bold;
+	line-height : 30px;
+}
+
+h3{
+	font-size: 24px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 70%;
+	margin-top: 40px;
+	line-height : 30px;
+
+}
+
+a{
+	color:#d03b40;
+	font-weight: bold;
+	font-size: 24px;
+
+}
+
+button{
+	font-size: 14px;
+}
+
+footer{
+	background-color: black;
+	padding: 40px;
+}
+p{
+	margin-top: 10px;
+}
+
+.date{
+	display: inline-block;
+	width: 100%;
+
+}
+
+.div-0{
+	height: 650px;
+	background-image: url("../images/Fondo1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.div-4{
+	background-image: url("../images/Fondo2.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.div-2,.div-3, .div-9, .div-10{
+	height: 350px;
+	padding: 40px;
+	text-align: center;
+}
+
+.line{
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 120px;
+	border-bottom: 3px solid white;
+}
+
+.div-2, .div-10{
+	background-color:#d03b40;
+	color:#ded6c0;
+}
+
+.div-3, .div-9{
+	background-color: #ded6c0;
+	color: #d03b40;
+}
+
+.h3-info{
+	width: 90%;
+}
+
+
+.div-4{
+	height: 600px;
+}
+
+.icon{
+	text-align: center;
+	height: auto;
+  padding-top: 50px;
+	padding-bottom: 25px;
+
+}
+
+.center{
+	text-align: center;
+}
+
+.boton{
+	background: none;
+	border: 3px solid #f5f0ed;;
+	text-align:center;
+	color:#f5f0ed;
+	padding: 15px;
+	margin-top: 100px;
+}
+
+.boton:hover{
+  box-shadow: 0px 0px 10px #999;
+}
+.boton:active{
+  box-shadow: 0px 0px 10px #000;
+}
+
+.div-5, .div-6, .div-7,.div-8{
+	color:#241d1b;
+	height: 425px;
+	background-color: #f5f0ed;
+}
+
+.more-info{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height : 25px;
+}
+
+.div-9,.div-10{
+	padding: 45px;}
+
+#logo{
+	padding-top: 30px;
+	padding-left: 15px;
+	width: 250px;
+	float: left;
+}
+
+#menu{
+	float: right;
+	min-height:0px;
+}
+
+#desayunar{
+	padding-top: 100px;
+}
+
+#maps{
+	color:#ded6c0;
+	font-weight: bold;
+}
+#punto{
+	display: none;
+}
+
+/* media for menu and when isn't movile size*/
+
+@media screen and (min-width: 800px) {
+
+	.date{
+		display: inline-block;
+		width: 130px;
+		padding-top: 40px;
+	}
+	#punto{
+		display: inline-block;
+	}
+	.div-2,
+	.div-9,.div-5,.div-7{
+		width: 50%;
+		float: left;
+	}
+	.div-3,
+	.div-10,.div-6,.div-8{
+		width: 50%;
+		float: right;
+	}
+	.div-4{
+		margin-top: 350px;
+	}
+}
+
+#menu{
+	color:#f5f0ed;
+	position: absolute;
+	top:90px;
+	right: 20px;
+}
+
+#menu-img{
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+}
+li{
+	margin-left: 15px;
+}
+
+.opt{
+	font-size: 16px;
+	color:#f5f0ed;
+
+
+}
+.lanzador-menu{
+	position: absolute;
+	top: 40px;
+	right: 20px;
+	background-color: #d03b40;
+	width: 50px;
+	height: 50px;
+}
+
+
+
+
+
+@media screen and (min-width: 801px){
+	.lanzador-menu{
+		display: none;
+	}
+	.navegacion {
+	}
+	li{
+		display: inline;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.js .navegacion{
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 100px;
+		right:10px;
+		background-color: #d03b40;
+
+	}
+	.js li {
+		padding: 10px;
+	}
+
+	.js .navegacion.menu-desplegado{
+		max-height: 200px;
+	}
+}

@@ -53,58 +53,45 @@ table {
 }
 /* anchura total = width */
 
-/*Eliminar el subrayado de enlaces*/
-a:link, a:visited, a:active {
-    text-decoration:none;
-		color: white;
-}
 
-/*WEBFONTS*/
-@font-face {
-  font-family: 'Work Sans', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-}
 /* Stylesheet */
-body{
-	font-size: 20px;
-	font-family:'Work Sans';
-	/*background-image: url("../images/fondo.png");*/
-	background-repeat: no-repeat;
-	background-position: center, center;
-	background-size: cover;
-	margin-left: auto;
-	margin-right: auto;
+body {
+	background-color: rgba(  72, 201, 176 , 1);
+	padding: 20px;
 }
 
-img{
-	height: 40px;
-	width: 40px;
+div{
+	background-color:   #34495e ;
+	overflow: hidden;
 }
-.nav-bar{
-	background-color: black;
-	color:white;
-	padding: 30px 30px 30px 30px;
+
+.titulo{
+	padding: 30px;
+	margin-bottom: 20px;
 }
-.nav-links{
+.parrafo{
+	padding: 100px;
+	margin-bottom: 20px;
+}
+.col{
+	float:left;
+	width: 49%;
+	margin-right: 1%;
+	padding: 90px;
+	margin-bottom: 20px;
+
+}
+.col2{
 	float:right;
+	width: 49%;
+	margin-left: 1%;
+	padding: 90px;
+	margin-bottom: 20px;
 }
 
-.links:hover{
-	border-bottom: 5px solid white;
-}
-
-#about, #art, #models #photography{
-	height: 160px;
-	width: 160px;
-
-}
-
-#about{
-	background-image: url("../images/fondo.png");
-  background-size: cover;
-	margin-left: auto;
-	margin-right:auto;
-	border-radius: 10px 40px 10px 40px;
+.parrafo2{
+	padding: 100px;
+	margin-top: 50px;
+	margin-bottom: 20px;
 
 }
