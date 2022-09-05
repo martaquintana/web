@@ -2,7 +2,8 @@ function acierto(lasTarjetas){
 	lasTarjetas.forEach(function(elemento) {
 		elemento.classList.add("acertada");		
 	});
-	
+
+	  document.querySelector("#sonido-acierto").play();
 	aciertos += 1;
         document.querySelector("#aciertos").innerHTML=aciertos;
 }
@@ -12,6 +13,8 @@ function error(lasTarjetas){
 	lasTarjetas.forEach(function(elemento) {
 			elemento.classList.add("error");		
 		});
+
+
 // EJERCICIO: quita las clases de descubierta y error, dentro de
   // un Timeout de 1000 ms
 setTimeout(function(){
@@ -21,6 +24,7 @@ setTimeout(function(){
 	});
 },1000);
 	errores += 1;
+        document.querySelector("#sonido-error").play();
         document.querySelector("#errores").innerHTML=errores
 }
 

@@ -1,14 +1,17 @@
-function barajaTarjetas() {
+function barajaTarjetas(lasTarjetas) {
   var resultado;
-  resultado = totalTarjetas.sort(function() {
+  totalTarjetas = lasTarjetas.concat(lasTarjetas);
+
+  resultado = totalTarjetas.sort(function(lasTarjetas) {
     return 0.5 - Math.random();
   });
   return resultado;
 }
 
-function reparteTarjetas() {
+function reparteTarjetas(lasTarjetas) {
+  barajaTarjetas(lasTarjetas)
   var mesa = document.querySelector("#mesa");
-  var tarjetasBarajadas = barajaTarjetas();
+  var tarjetasBarajadas = barajaTarjetas(lasTarjetas);
   mesa.innerHTML = "";
 
   // EJERCICIO: recorre el array de tarjetasBarajadas y para cada

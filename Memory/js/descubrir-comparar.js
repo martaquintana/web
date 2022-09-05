@@ -1,16 +1,23 @@
 function descubrir() {
   var descubiertas;
+  var tarjetasPendientes;
   var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   if(totalDescubiertas.length > 1){
   	return;
   }
   this.classList.add("descubierta");
+  document.querySelector("#sonido-carta").play();
 
   descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   if(descubiertas.length < 2){
   	return;
   }
   comparar(descubiertas)
+  actualizaContador();
+  tarjetasPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+  if (tarjetasPendientes.length === 0) {
+    setTimeout(finalizar, 1000);
+  }
 }
 
 
