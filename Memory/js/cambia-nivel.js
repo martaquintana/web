@@ -8,10 +8,25 @@ function actualizaNivel() {
     nivelTexto = "0" + nivelTexto;
   }
   document.querySelector("#nivel").innerText = nivelTexto;
+  var movMax = niveles[nivelActual].movimientosMax;
+  if (movMax < 10) {
+    movMax = "0" + niveles[nivelActual].movimientosMax;;
+  }
+  document.querySelector("#mov-total").innerText = movMax;
 }
 
 function cargaNuevoNivel() {
   subeNivel();
   actualizaNivel();
+  iniciarReparto()
+}
+
+function cargaNivel(level) {
+  nivelActual= level;
+  var nivelTexto = nivelActual;
+  if (nivelTexto < 10) {
+    nivelTexto = "0" + nivelTexto;
+  }
+  document.querySelector("#nivel").innerText = nivelTexto;
   iniciarReparto()
 }

@@ -4,14 +4,11 @@ function finalizar() {
     document.querySelector("#subeNivel").classList.add("visible");
   } else {
     document.querySelector("#endGame").classList.add("visible");
+    nivelActual= 0;
   }
-}
-
-function gameOver() {
-  clearInterval(cronometro);
-  document.querySelector("#gameOver").classList.add("visible");
 }
 
 function timeOver() {
   document.querySelector("#timeOver").classList.add("visible");
+  nivelActual= 0;
 }

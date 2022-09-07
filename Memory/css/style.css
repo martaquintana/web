@@ -251,3 +251,12 @@ button:focus {
   display: none;
 }
 
+.oculto{
+  display: none;
+}
+
+@media screen and (max-width: 350px) {
+	.mesa{
+	  margin:50%;
+	}
+}

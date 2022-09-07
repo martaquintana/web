@@ -13,7 +13,9 @@ function descubrir() {
   	return;
   }
   comparar(descubiertas)
-  actualizaContador();
+  if (!modoRelax) {
+  	actualizaContador();
+  }
   tarjetasPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
   if (tarjetasPendientes.length === 0) {
     setTimeout(finalizar, 1000);
