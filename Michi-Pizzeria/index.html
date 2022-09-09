@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Michi pizzeria</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
+      rel="stylesheet"
+    />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/menu-nav.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <header class="cabecera oculto">
+      <div class="contadores menu">
+        <div class="contador-item">
+
+          <div class="cabecera-num">
+    		<button id="mostrar-menu" class=" mostrar-menu">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contadores movm">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">03</span>
+          </div>
+        </div>
+      </div>
+       <div class="contadores crono">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+		<span id="minutos">00</span>:<span id="segundos">00</span>
+
+          </div>
+	</div>
+	</div>
+       <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Aciertos</h4>
+          <div class="cabecera-num">
+            &nbsp;<span id="aciertos"> 0</span>
+
+          </div>
+	</div>
+      </div>
+       <div class="contadores">
+        <div class="contador-item">
+	<h4 class="cabecera-titulo">Fallos</h4>
+          <div class="cabecera-num">
+            &nbsp;<span id="errores">0</span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Nivel</h4>
+        <div class="cabecera-num"><span id="nivel">01</span></div>
+      </div>
+    </header>
+    <main>
+      <div id="mesa" class="mesa">
+	<div>
+	<h1>Michi Pizzeria</h1>
+        <button class="boton-repartir">Competición</button>
+	<button class="boton-repartir relax">Modo Relax</button>
+      </div> 
+
+      </div>  
+    </main>
+    <audio src="sonidos/acierto.mp3" class="sonido" id="sonido-acierto" preload="auto"></audio>
+    <audio src="sonidos/error.mp3" class="sonido" id="sonido-error" preload="auto" ></audio>
+    <audio src="sonidos/carta.mp3" class="sonido" id="sonido-carta" preload="auto" ></audio>
+
+      <div id="subeNivel" class="sube-nivel">
+        <div class="modal">
+          <h2>¡Muy bien!</h2>
+          <button id="subir">Siguiente nivel</button>
+          <button class="reiniciar" onclick="iniciarReparto()">Repetir</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>¡Oh no!</h2>
+          <p>Te has quedado sin movimientos 😭</p>
+          <button class="reiniciar" onclick="iniciarReparto()">Reiniciar</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>¡Enhorabuena!</h2>
+          <p>Has superado todos los niveles 🏆</p>
+          <button class="reiniciar" onclick="iniciarReparto()">Reiniciar</button>
+        </div>
+      </div>
+    <div class="menu-nav">
+      <button id="cerrar-menu" class="cerrar-menu" aria-label="Cerrar">
+        &times;
+      </button>
+      <ul>
+        <li><a class=".n1" onclick="cargaNivel(0)">Nivel 1</a></li>
+        <li><a class=".n2" onclick="cargaNivel(1)">Nivel 2</a></li>
+        <li><a class=".n3" onclick="cargaNivel(2)">Nivel 3</a></li>
+        <li><a class=".n4" onclick="cargaNivel(3)">Nivel 4</a></li>
+        <li><a class=".n5" onclick="cargaNivel(4)">Nivel 5</a></li>
+        <li><a class=".n6" onclick="cargaNivel(5)">Nivel 6</a></li>
+        <li><a class=".n7" onclick="cargaNivel(6)">Nivel 7</a></li>
+        <li><a class=".n8" onclick="cargaNivel(7)">Nivel 8</a></li>
+        <li><a class=".n9" onclick="cargaNivel(8)">Nivel 9</a></li>
+        <li><a class=".n10s" onclick="cargaNivel(9)">Nivel 10</a></li>
+      </ul>
+    </div>
+    <script src="js/variables-globales.js"></script>
+    <script src="js/baraja-reparte.js"></script>
+    <script src="js/descubrir-comparar.js"></script>
+    <script src="js/acierto-error.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/finalizar.js"></script>
+    <script src="js/cambia-nivel.js"></script>
+    <script src="js/game-over.js"></script>
+    <script src="js/menu-nav.js"></script>
+    <script src="js/iniciar.js"></script>
+  </body>
+</html>

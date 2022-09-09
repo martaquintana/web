@@ -1,0 +1,27 @@
+:root {
+  --bg: #fafafa;
+  --font: "Archivo", sans-serif;
+  --font-display: "Archivo Narrow", sans-serif;
+  --hotpink: orange;
+  --orange: #f27121;
+  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+}
+
+
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font);
+ background-color: #fff;
+ background-image: url("../michipizza.png");
+
+
+}
+
+.fondo-horno{
+ background-image: url("../horno.jpg");
+ background-repeat: repeat;
+
+}
