@@ -1,6 +1,6 @@
 function iniciarCronometro() {
 	var segundos = 0;
-	var minutos = 1;
+	var minutos = niveles[nivelActual].minutosMax;
 	var segundosTexto;
 	var minutosTexto;
 
@@ -26,6 +26,11 @@ function iniciarCronometro() {
 		}
 		document.querySelector("#minutos").innerText = minutosTexto;
 		document.querySelector("#segundos").innerText = segundosTexto;
+	  if (document.querySelector("#minutos").innerHTML==00 && document.querySelector("#segundos").innerHTML==00) {
+	    gameOverTime();
+	    return;
+	  }
+
 	}
 
 	cronometro = setInterval(actualizarCronometro,1000);
