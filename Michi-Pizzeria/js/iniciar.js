@@ -3,6 +3,11 @@ function iniciarReparto() {
   movimientos = 0;
   aciertos= 0;
   errores = 0;
+  var movMax = niveles[nivelActual].movimientosMax;
+  if (movMax < 10) {
+    movMax = "0" + niveles[nivelActual].movimientosMax;;
+  }
+  document.querySelector("#mov-total").innerText = movMax;
   clearInterval(cronometro);
   if (!modoRelax) {
     iniciarCronometro();
