@@ -1,0 +1,109 @@
+<html>
+    <body>
+        <!--<h1>
+            Hello, Domestika
+        </h1>-->
+        <canvas width="600" height="600"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+            //blue Square
+            context.fillStyle='blue';//Property
+            //context.fillRect(100,100,400,400);
+            
+            //Square border
+            context.lineWidth = 4;
+            context.beginPath();
+            //context.rect(100,100,400,400);
+            context.stroke();
+
+            //Circle
+
+            context.beginPath();
+            //context.arc(300,300,100,0,Math.PI*2);
+            context.stroke();
+            //x,y,r,startangle,endangle in rads
+
+            const width=60;
+            const height=60;
+            const gap =20;
+            let x, y;
+            //MATRIX
+            for(let i=0;i<5;i++){
+                for(let j=0;j<5;j++){
+                    x = 100+(width+gap)*i;
+                    y = 100+(height+gap)*j;
+                    context.beginPath();
+                    context.rect(x,y,width,height);
+                    context.stroke();
+                    //Conditionals
+                    if(Math.random()>0.5){
+                        context.beginPath();
+                        context.rect(x+8,y+8,width-16,height-16);
+                        context.stroke();
+                    }else{
+
+                    }
+
+                }
+            }
+
+            //Math.random() // 0 ... 1
+
+            //Variables & Values
+            let n = 5;
+            let year = 2042;
+            let nexYear = year + 1;
+
+            let dinner = 'pasta';
+            let sentence = 'Tonight, dinner will be ' + dinner;
+
+            saySomething(sentence);
+            //Functions
+            function saySomething(param){
+                console.log(param)
+            }
+
+            function add(a,b){
+                return a + b;
+            }
+
+            let result = add(5,7);
+            console.log(result);
+
+            let multiply = (a,b) =>{
+                return a*b;
+            }
+            console.log(multiply(5,7));
+
+            //Arrays
+            let years = [];
+            let menu = ['started', 'main','desert','drinks'];
+            
+            //Loops
+            for(let i=0; i < menu.length; i++){
+                console.log(menu[i]);
+            }
+            for(let i=0; i < 10; i++){
+                years.push(year+i);
+            }
+            console.log(years);
+
+            const gravity = 9.81; //not change --> constants
+            let velocity = 0.0;
+
+            menu.forEach(item =>{
+                console.log(item);
+            })
+
+            const artists = ["One Direction", "30 Seconds To Mars", "5 Seconds of Summer", "Shawn Mendes", "Olly Murs", "Aitana", "Sebastian Yatra",]
+            function listArtist(array){
+                array.forEach(item =>{
+                console.log(item);
+                })
+            }
+            listArtist(artists);
+
+        </script>
+    </body>
+</html>
