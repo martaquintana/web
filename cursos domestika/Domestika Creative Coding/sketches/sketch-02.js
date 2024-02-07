@@ -2,7 +2,8 @@ const canvasSketch = require('canvas-sketch');
 const math =require('canvas-sketch-util/math');
 const random = require('canvas-sketch-util/random');
 const settings = {
-	dimensions: [ 1080, 1080 ]
+	dimensions: [ 1080, 1080 ],
+  //animate:true,
 };
 /*
 const degToRad =(degrees)=>{
@@ -22,9 +23,22 @@ const randomYellowColor=()=> {
   return color;
 }
 
+const fps = 30; // Define la velocidad deseada (cuadros por segundo)
+const frameDelay = 1000 / fps; // Calcula el retraso entre cuadros
+
+let lastFrameTime = 0;
+
 const sketch = () => {
   return ({ context, width, height }) => {
-    context.fillStyle = '#2b50b1';
+      // En el ciclo de animación
+  /*function animate(time) {
+    if (time - lastFrameTime > frameDelay) {
+      lastFrameTime = time;
+*/
+      context.clearRect(0, 0, width, height);
+
+      // Resto de tu código de animación
+      context.fillStyle = '#2b50b1';
     context.fillRect(0, 0, width, height);
 
     context.fillStyle='black';
@@ -35,7 +49,7 @@ const sketch = () => {
     const h = height * 0.1;
     let x,y;
     const num =60;
-    const radius =width*0.7;
+    const radius =width*0.5;
     for(let i=0;i<num;i++){
       const slice =math.degToRad(360/num);
       const angle=slice*2*i;
@@ -66,8 +80,15 @@ const sketch = () => {
     }
   
 
-  };
+/*
+      requestAnimationFrame(animate);
+    } else {
+      requestAnimationFrame(animate);
+    }
+  }
 
+  animate();*/
+};
 };
 
 canvasSketch(sketch, settings);
