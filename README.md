@@ -14,6 +14,3 @@ Proyecto Marta Quintana del curso Introducción al Desarrollo Web Responsive con
 
 https://martaquintana.github.io/web/Michi-Pizzeria/
 
-Codificación creativa: crea piezas visuales con JavaScript
-
-https://github.com/martaquintana/web/tree/master/cursos%20domestika/Domestika%20Creative%20Coding
